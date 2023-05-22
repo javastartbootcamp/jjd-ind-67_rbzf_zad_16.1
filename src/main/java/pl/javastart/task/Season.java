@@ -23,4 +23,15 @@ public enum Season {
         return monthList;
     }
 
+    public static Season getSeason(String userInput) {
+        Season season = null;
+        for (Season value : Season.values()) {
+            if (userInput.equalsIgnoreCase(value.getPlTranslation())) {
+                season = value;
+                break;
+            }
+        }
+        return season;
+    }
+
 }
